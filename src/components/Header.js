@@ -1,9 +1,35 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+import { BsPersonCircle} from "react-icons/bs";
+import { MdOutlineWatchLater } from "react-icons/md"; 
 
-function Header() {
+export default function Header() {
   return (
-    <div>Header</div>
+    
+    <HeaderContainer>
+        <HeaderLeft>
+        <HeaderAvatar>
+            <BsPersonCircle></BsPersonCircle>
+        </HeaderAvatar>
+       
+        </HeaderLeft>
+        <HeaderRight>
+            <HeaderSearch>
+                
+            <input type="text" placeholder="Search" />             </HeaderSearch>
+            <MdOutlineWatchLater />
+        </HeaderRight>
+    </HeaderContainer>
+
+    
   )
 }
 
-export default Header
+const HeaderContainer = styled.div``
+const HeaderLeft = styled.div``
+const HeaderRight = styled.div``
+const HeaderAvatar = styled.div``
+const HeaderSearch = styled.div``
+
+
+
